@@ -88,9 +88,8 @@ We need to retrieve our Wallet's current record plaintext to deploy our program.
 ### Step 4. Create our Deployment Script
 
 We need a few environment variables set to deploy our program. We can create a script to set these variables for us.
-Here's an example
 
-Create a new file named `deploy.sh` in the project directory and copy the following into the file
+Create a new file named `deploy.sh` in the project directory and copy the following into the file, fill out the variables with the appropriate fields
 
 ````
 WALLETADDRESS=""
