@@ -24,7 +24,7 @@ Be sure to save the Address, View and Private Keys of this wallet, you will need
 
 Alternatively you can
 1. Create the wallet via Leo Wallet if you installed the above Chrome Extension
-2. Import the wallet you created via `leo account new` using the private key
+2. Import the wallet into Leo Wallet you created via `leo account new` using the private key
 
 ### Get Testnet Tokens
 
