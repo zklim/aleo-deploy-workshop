@@ -22,6 +22,10 @@ You will need a Leo Wallet to deploy your program. You can create a wallet by ru
 
 Be sure to save the Address, View and Private Keys of this wallet, you will need them later.
 
+Alternatively you can
+1. Create the wallet via Leo Wallet if you installed the above Chrome Extension
+2. Import the wallet you created via `leo account new` using the private key
+
 ### Get Testnet Tokens
 
 If you are participating in a live workshop, you will be given a wallet and testnet tokens to use.
