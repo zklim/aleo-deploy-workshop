@@ -89,7 +89,7 @@ We need to retrieve our Wallet's current record plaintext to deploy our program.
 
 We need a few environment variables set to deploy our program. We can create a script to set these variables for us.
 
-Create a new file named `deploy.sh` in the project directory and copy the following into the file, fill out the variables with the appropriate fields
+Create a new file named `deploy.sh` in the project directory and copy the following into the file
 
 ````
 WALLETADDRESS=""
@@ -105,6 +105,8 @@ RECORD="{
 
 cd .. && snarkos developer deploy "${APPNAME}.aleo" --private-key "${PRIVATEKEY}" --query "https://vm.aleo.org/api" --path "./${APPNAME}/build/" --broadcast "https://vm.aleo.org/api/testnet3/transaction/broadcast" --fee 1000000 --record "${RECORD}"```
 ````
+
+Fill out the variables with the appropriate values and save the file
 
 ### Step 5. Execute the Script to Deploy our Program
 
