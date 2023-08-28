@@ -1,6 +1,6 @@
 # Aleo Deployment Demo
 
-In this repository we will go through the steps to deploy your own Leo program on to the Aleo Network.
+In this repository we will go through the steps to deploy your own Leo program on the Aleo Network.
 
 ## Prerequisites
 
@@ -88,7 +88,6 @@ We need to retrieve our Wallet's current record plaintext to deploy our program.
 ### Step 4. Create our Deployment Script
 
 We need a few environment variables set to deploy our program. We can create a script to set these variables for us.
-Here's an example
 
 Create a new file named `deploy.sh` in the project directory and copy the following into the file
 
@@ -106,6 +105,8 @@ RECORD="{
 
 cd .. && snarkos developer deploy "${APPNAME}.aleo" --private-key "${PRIVATEKEY}" --query "https://vm.aleo.org/api" --path "./${APPNAME}/build/" --broadcast "https://vm.aleo.org/api/testnet3/transaction/broadcast" --fee 1000000 --record "${RECORD}"```
 ````
+
+Fill out the variables with the appropriate values and save the file
 
 ### Step 5. Execute the Script to Deploy our Program
 
