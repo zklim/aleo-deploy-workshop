@@ -8,10 +8,11 @@ Make sure you have the following software installed on your local machine:
 
 ### Software Installation
 
-1. [Install Leo](https://developer.aleo.org/leo/installation)
-2. [Install Rust](https://www.rust-lang.org/tools/install)
-3. [Install snarkos](https://developer.aleo.org/testnet/getting_started/installation/)
-4. [Install Leo Wallet (optional)](https://leo.app/)
+1.  [Install Git](https://git-scm.com/downloads)
+2.  [Install Rust](https://www.rust-lang.org/tools/install)
+3.  [Install Leo](https://developer.aleo.org/leo/installation)
+4.  [Install snarkos](https://developer.aleo.org/testnet/getting_started/installation/)
+5.  [Install Leo Wallet](https://leo.app/)
 
 ### Create a Leo Wallet
 
@@ -23,9 +24,9 @@ Be sure to save the Address, View and Private Keys of this wallet, you will need
 
 ### Get Testnet Tokens
 
-If you are participating in a live workshop, you will be given testnet tokens to use. If you are not participating in a live workshop, you can get testnet tokens by using the faucet below:
+If you are participating in a live workshop, you will be given a wallet and testnet tokens to use.
 
-1.[Aleo Faucet](https://faucet.aleo.org/) to get testnet tokens for your wallet.
+If you are not participating in a live workshop, or you prefer to do this part yourself, you can get testnet tokens by using the [Aleo Faucet](https://faucet.aleo.org/).
 
 ## Demo
 
