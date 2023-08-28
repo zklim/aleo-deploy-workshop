@@ -80,7 +80,7 @@ We need to retrieve our Wallet's current record plaintext to deploy our program.
 2. Click on the Wallet you created in the Prerequisites
 3. Click on the Activities tab and click into the most recent transaction, this opens a new window in a block explorer
 4. You should see this page
-   ![](image.png)
+   ![](./transitions.png)
 5. Click on the first transition ID, this will open a new page
 6. Connect your wallet, scroll down and retrieve your record data, it should be highlighted in green text, save this text for the next step
 
@@ -113,4 +113,4 @@ Run the deploy script
 `bash ./deploy.sh`
 
 You see output like this if successful
-![](image-1.png)
+![](./deployment_success.png)
