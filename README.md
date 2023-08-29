@@ -41,9 +41,24 @@ In Leo, programs must be unique, so make sure to use a unique name.
 
 `leo new <project_name>`
 
+The result will be a new folder `project_name` with the following structure:
+
+```
+.
+├── README.md
+├── build
+│   ├── main.aleo
+│   └── program.json
+├── inputs
+│   └── deploy_workshop.in
+├── program.json
+└── src
+    └── main.leo
+```
+
 ### Step 2: Write your program
 
-Write your code in the main.leo file. For this demo we will be using the following code:
+Write your code in the `src/main.leo` file. For this demo we will be using the following code that implements a basic token.
 
 ```
 // Replace <project_name> with the name of your project.
@@ -80,6 +95,67 @@ program <project_name>.aleo {
 }
 ```
 
+### Define Inputs
+
+In the `./inputs/project_name.in` file, we need to define the inputs for our program. For this demo we will be using the following inputs:
+
+```
+// The program input for deploy_workshop/src/main.leo
+[mint]
+balance: u32 = 100u32;
+
+[transfer]
+receiver: address = aleo1yn6halw6astkc8jsl88sukelef3e8xrawugfjtx7kjcuuxdm6spsdtc249;
+amount: u32 = 10u32;
+input: Token = Token {
+  owner: aleo102nryeeun6da4atqggu0q9aj5cqem7tpjzvce4nc88yzu29n8sgs9qelp7,
+  balance: 100u32,
+  _nonce: 661901642905281065575358583071347542160248627750537954509114007526888699661group
+};
+```
+
+### Build & Test our Program
+
+Let's make sure that our program is working by running the following commands:
+
+1. Does it build? `leo build`
+   `Leo ✅ Compiled 'main.leo' into Aleo instructions`
+2. Can we mint tokens? `leo run mint`
+   You should see the following output:
+
+```
+{
+  owner: aleo102nryeeun6da4atqggu0q9aj5cqem7tpjzvce4nc88yzu29n8sgs9qelp7.private,
+  balance: 100u32.private,
+  _nonce: 292936196563333932009136915121914006898609101920119023221288671394356999564group.public
+}
+```
+
+3. Can we transfer tokens? `leo run transfer`
+
+```craigjohnson@home deploy_workshop % leo run transfer
+       Leo ✅ Compiled 'main.leo' into Aleo instructions
+
+⛓  Constraints
+
+ •  'deploy_workshop.aleo/transfer' - 4,075 constraints (called 1 time)
+
+➡️  Outputs
+
+ • {
+  owner: aleo1yn6halw6astkc8jsl88sukelef3e8xrawugfjtx7kjcuuxdm6spsdtc249.private,
+  balance: 10u32.private,
+  _nonce: 3050046340461200467640466967043652446168052649619713936697821365575779437863group.public
+}
+ • {
+  owner: aleo102nryeeun6da4atqggu0q9aj5cqem7tpjzvce4nc88yzu29n8sgs9qelp7.private,
+  balance: 90u32.private,
+  _nonce: 7955845234401838954345597221810328519950488237684582098690500295625246536712group.public
+}
+```
+
+You can see here, one account now has 90 tokens and the other has 10, meaning we succesfully transfered 10 tokens.
+
 ### Step 3. Getting our Record Plaintext
 
 We need to retrieve our Wallet's current record plaintext to deploy our program. I prefer to use the Leo Wallet to do this
@@ -99,18 +175,19 @@ We need a few environment variables set to deploy our program. We can create a s
 Create a new file named `deploy.sh` in the project directory and copy the following into the file
 
 ````
+
 WALLETADDRESS=""
 PRIVATEKEY=""
 
 APPNAME="<project_name>"
 PATHTOAPP=$(realpath -q $APPNAME)
 
-
 RECORD="{
-    RECORD PLAINTEXT HERE
+RECORD PLAINTEXT HERE
 }"
 
 cd .. && snarkos developer deploy "${APPNAME}.aleo" --private-key "${PRIVATEKEY}" --query "https://vm.aleo.org/api" --path "./${APPNAME}/build/" --broadcast "https://vm.aleo.org/api/testnet3/transaction/broadcast" --fee 1000000 --record "${RECORD}"```
+
 ````
 
 Fill out the variables with the appropriate values and save the file
