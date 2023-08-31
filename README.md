@@ -13,6 +13,7 @@ Make sure you have the following software installed on your local machine:
 3.  [Install Leo](https://developer.aleo.org/leo/installation)
 4.  [Install snarkos](https://developer.aleo.org/testnet/getting_started/installation/)
 5.  [Install Leo Wallet](https://leo.app/)
+6.  [Install VSCode](https://code.visualstudio.com/download)
 
 ### Create a Leo Wallet
 
@@ -23,6 +24,7 @@ You will need a Leo Wallet to deploy your program. You can create a wallet by ru
 Be sure to save the Address, View and Private Keys of this wallet, you will need them later.
 
 Alternatively you can
+
 1. Create the wallet via Leo Wallet if you installed the above Chrome Extension
 2. Import the wallet into Leo Wallet you created via `leo account new` using the private key
 
