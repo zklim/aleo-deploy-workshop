@@ -28,9 +28,7 @@ Alternatively you can
 
 ### Get Testnet Tokens
 
-If you are participating in a live workshop, you will be given a wallet and testnet tokens to use.
-
-If you are not participating in a live workshop, or you prefer to do this part yourself, you can get testnet tokens by using the [Aleo Faucet](https://faucet.aleo.org/).
+You can get testnet tokens by using the [Aleo Faucet](https://faucet.aleo.org/).
 
 ## Deployment Demo
 
