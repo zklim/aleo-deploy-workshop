@@ -131,6 +131,8 @@ Let's make sure that our program is working by running the following commands:
 }
 ```
 
+Copy the output record from the mint transition and paste it into the `./inputs/project_name.in` file under the `[transfer]` section.
+
 3. Can we transfer tokens? `leo run transfer`
 
 ```craigjohnson@home deploy_workshop % leo run transfer
@@ -174,7 +176,7 @@ We need a few environment variables set to deploy our program. We can create a s
 
 Create a new file named `deploy.sh` in the project directory and copy the following into the file
 
-````
+```
 
 WALLETADDRESS=""
 PRIVATEKEY=""
@@ -188,7 +190,7 @@ RECORD PLAINTEXT HERE
 
 cd .. && snarkos developer deploy "${APPNAME}.aleo" --private-key "${PRIVATEKEY}" --query "https://vm.aleo.org/api" --path "./${APPNAME}/build/" --broadcast "https://vm.aleo.org/api/testnet3/transaction/broadcast" --fee 1000000 --record "${RECORD}"``
 
-````
+```
 
 Fill out the variables with the appropriate values and save the file
 
