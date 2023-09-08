@@ -36,10 +36,10 @@ You can get testnet tokens by using the [Aleo Faucet](https://faucet.aleo.org/).
 
 ### Step 1: Initalize a Leo Project
 
-Run the following command to initalize a leo project, be sure to replace `<project_name>` with the name of your project.
+Run the following command to initalize a leo project.
 In Leo, programs must be unique, so make sure to use a unique name.
 
-`leo new <project_name>`
+`leo new token_$RANDOM`
 
 The result will be a new folder `project_name` with the following structure:
 
