@@ -131,7 +131,7 @@ Let's make sure that our program is working by running the following commands:
 }
 ```
 
-Copy the output record from the mint transition and paste it into the `./inputs/project_name.in` file under the `[transfer]` section. Be sure to remove the `.private` and `.group` suffixes.
+Copy the output record from the mint transition and paste it into the `./inputs/project_name.in` file under the `[transfer]` section. Be sure to remove the `.private` and `.public` suffixes.
 
 3. Can we transfer tokens? `leo run transfer`
 
