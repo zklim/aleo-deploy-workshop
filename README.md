@@ -17,6 +17,8 @@ Make sure you have the following software installed on your local machine:
 
 ### Create a Leo Wallet
 
+## Skip this step if you are at a ZK House and jump to Step 1.
+
 You will need a Leo Wallet to deploy your program. You can create a wallet by running the following command:
 
 `leo account new`
