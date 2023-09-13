@@ -6,6 +6,10 @@ In this repository we will go through the steps to deploy your own Leo program o
 
 Make sure you have the following software installed on your local machine:
 
+### FAQ
+
+If you run into issues while installing the above software, or following the workshop, please see the [FAQ](./FAQ.md)
+
 ### Software Installation
 
 1.  [Install Git](https://git-scm.com/downloads)
