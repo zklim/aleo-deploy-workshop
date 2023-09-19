@@ -21,20 +21,25 @@ If you run into issues while installing the above software, or following the wor
 
 ### Create a Leo Wallet
 
-You will need a Leo Wallet to deploy your program. You can create a wallet by running the following command:
+You will need a Leo Wallet to deploy your program. You have two options to setup a wallet
+
+#### The CLI
+
+You can create a wallet using the Leo CLI by running the following command
 
 `leo account new`
 
 Be sure to save the Address, View and Private Keys of this wallet, you will need them later.
 
-Alternatively you can
+#### Chrome Extension
 
-1. Create the wallet via Leo Wallet if you installed the above Chrome Extension
-2. Import the wallet into Leo Wallet you created via `leo account new` using the private key
+Ensure you installed [Leo Wallet](leo.app) and follow the setup process to create a new wallet.
 
 ### Get Testnet Tokens
 
 You can get testnet tokens by using the [Aleo Faucet](https://faucet.aleo.org/).
+
+If you are using the Leo Wallet Chrome Extension, you can also get testnet tokens by clicking on the wallet and then clicking on the `Faucet` button. Scan the QR code and send the generated text message to recieve testnet tokens.
 
 ## Deployment Demo
 
@@ -46,7 +51,7 @@ In Leo, programs must be unique, so make sure to use a unique name.
 MacOS
 `leo new token_$RANDOM`
 
-Windows 
+Windows
 `leo new token_(RANDOM_CHARACTERS_HERE)`
 
 The result will be a new folder `project_name` with the following structure:
