@@ -48,10 +48,12 @@ If you are using the Leo Wallet Chrome Extension, you can also get testnet token
 Run the following command to initalize a leo project.
 In Leo, programs must be unique, so make sure to use a unique name.
 
-MacOS
+macOS & Unix based systems
+
 `leo new token_$RANDOM`
 
-Windows
+Windows (choose a random string of alphanumeric characters)
+
 `leo new token_(RANDOM_CHARACTERS_HERE)`
 
 The result will be a new folder `project_name` with the following structure:
