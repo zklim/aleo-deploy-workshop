@@ -6,10 +6,6 @@ In this repository we will go through the steps to deploy your own Leo program o
 
 Make sure you have the following software installed on your local machine:
 
-### FAQ
-
-If you run into issues while installing the above software, or following the workshop, please see the [FAQ](./FAQ.md)
-
 ### Software Installation
 
 1.  [Install Git](https://git-scm.com/downloads)
@@ -18,6 +14,10 @@ If you run into issues while installing the above software, or following the wor
 4.  [Install snarkos](https://developer.aleo.org/testnet/getting_started/installation/)
 5.  [Install Leo Wallet](https://leo.app/)
 6.  [Install VSCode](https://code.visualstudio.com/download)
+
+### FAQ
+
+If you run into issues while installing the above software, or following the workshop, please see the [FAQ](./FAQ.md)
 
 ### Create a Leo Wallet
 
