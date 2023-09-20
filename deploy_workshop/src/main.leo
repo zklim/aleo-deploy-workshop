@@ -7,10 +7,10 @@ program deploy_workshop.aleo {
     }
 
     // Define a mint transition that takes a balance and returns a token
-    transition mint(balance: u32) -> Token {
+    transition mint(amount: u32) -> Token {
         return Token {
             owner: self.caller,
-            balance: balance,
+            balance: amount,
         };
     }
 

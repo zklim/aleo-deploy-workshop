@@ -85,10 +85,10 @@ program <project_name>.aleo {
     }
 
     // Define a mint transition that takes a balance and returns a token
-    transition mint(balance: u32) -> Token {
+    transition mint(amount: u32) -> Token {
         return Token {
             owner: self.caller,
-            balance: balance,
+            balance: amount,
         };
     }
 
@@ -217,3 +217,5 @@ Run the deploy script
 
 You see output like this if successful
 ![](./deployment_success.png)
+
+Don't forget to save your work!
