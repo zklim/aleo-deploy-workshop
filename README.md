@@ -11,7 +11,7 @@ Make sure you have the following software installed on your local machine:
 1.  [Install Git](https://git-scm.com/downloads)
 2.  [Install Rust](https://www.rust-lang.org/tools/install)
 3.  [Install Leo](https://developer.aleo.org/leo/installation)
-4.  [Install snarkos](https://developer.aleo.org/testnet/getting_started/installation/)
+4.  [Install snarkos](https://github.com/AleoHQ/snarkOS)
 5.  [Install Leo Wallet](https://leo.app/)
 6.  [Install VSCode](https://code.visualstudio.com/download)
 
@@ -133,9 +133,7 @@ input: Token = Token {
 
 Let's make sure that our program is working by running the following commands:
 
-1. Does it build? `leo build`
-   `Leo ✅ Compiled 'main.leo' into Aleo instructions`
-2. Can we mint tokens? `leo run mint`
+1. Can we mint tokens? `leo run mint`
    You should see the following output:
 
 ```
@@ -148,7 +146,7 @@ Let's make sure that our program is working by running the following commands:
 
 Copy the output record from the mint transition and paste it into the `./inputs/project_name.in` file under the `[transfer]` section. Be sure to remove the `.private` and `.public` suffixes.
 
-3. Can we transfer tokens? `leo run transfer`
+2. Can we transfer tokens? `leo run transfer`
 
 ```craigjohnson@home deploy_workshop % leo run transfer
        Leo ✅ Compiled 'main.leo' into Aleo instructions
@@ -173,17 +171,13 @@ Copy the output record from the mint transition and paste it into the `./inputs/
 
 You can see here, one account now has 90 tokens and the other has 10, meaning we succesfully transfered 10 tokens.
 
-### Step 3. Getting our Record Plaintext
+### Step 3. Convert public fees to private fees
 
-We need to retrieve our Wallet's current record plaintext to deploy our program. I prefer to use the Leo Wallet to do this
+Two ways of doing this:
+1. [aleo.tools](https://aleo.tools/transfer)
 
-1. Open the Leo Wallet
-2. Click on the Wallet you created in the Prerequisites
-3. Click on the Activities tab and click into the most recent transaction, this opens a new window in a block explorer
-4. You should see this page
-   ![](./transitions.png)
-5. Click on the first transition ID, this will open a new page
-6. Connect your wallet, scroll down and retrieve your record data, it should be highlighted in green text, save this text for the next step
+2. Using snarkos
+   - `snarkos developer execute --private-key "${PRIVATE_KEY}" --query "https://api.explorer.aleo.org/v1" "credits.aleo" "transfer_public_to_private" "<ADDRESS_TO_SEND>" "10000000u64" --broadcast "https://vm.aleo.org/api/testnet3/transaction/broadcast"`
 
 ### Step 4. Create our Deployment Script
 
@@ -197,7 +191,6 @@ WALLETADDRESS=""
 PRIVATEKEY=""
 
 APPNAME="<project_name>"
-PATHTOAPP=$(realpath -q $APPNAME)
 
 RECORD="{
 RECORD PLAINTEXT HERE
