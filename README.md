@@ -176,8 +176,10 @@ You can see here, one account now has 90 tokens and the other has 10, meaning we
 Two ways of doing this:
 1. [aleo.tools](https://aleo.tools/transfer)
 
-2. Using snarkos
+2. Using snarkos cli
    - `snarkos developer execute --private-key "${PRIVATE_KEY}" --query "https://api.explorer.aleo.org/v1" "credits.aleo" "transfer_public_to_private" "<ADDRESS_TO_SEND>" "10000000u64" --broadcast "https://vm.aleo.org/api/testnet3/transaction/broadcast"`
+   - reference: https://developer.aleo.org/testnet/getting_started/deploy_execute_demo
+   - query api: https://api.explorer.aleo.org/v1
 
 ### Step 4. Create our Deployment Script
 
